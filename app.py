@@ -1,6 +1,11 @@
 import datetime
+import os
 from pymongo import MongoClient
 from flask import Flask,render_template,request
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 def create_app():
     app=Flask(__name__)
