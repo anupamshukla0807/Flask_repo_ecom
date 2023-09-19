@@ -18,7 +18,7 @@ def create_app():
     def sign_in():
         return render_template('sign_in.html')
 
-    client = MongoClient("mongodb+srv://anupam-shukla:<shuklaanupam>@cluster0.hugp9.mongodb.net/?retryWrites=true&w=majority")   
+    client = MongoClient("MONGO_URL")   
     app.db = client.microblog
 
     @app.route("/", methods=["GET", "POST"])
